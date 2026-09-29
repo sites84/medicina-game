@@ -1,12 +1,13 @@
 const scenes={
 room:{image:"assets/scenes/01_quarto.webp",speaker:"Narrador",text:"Amanhã começa uma nova vida. Pela primeira vez, a Medicina deixa de ser apenas um sonho distante.",next:"family",hotspots:[
-{id:"mochila",x:22,y:40,action:"say",text:"A mochila que sua mãe lhe deu quatro anos atrás. Velha, mas ainda firme."},
-{id:"jaleco",x:48,y:62,action:"open",target:"coat"},
-{id:"caderno",x:43,y:90,action:"open",target:"notebook"},
-{id:"estojo",x:77,y:91,action:"say",text:"Seu estojo. Poucas canetas, alguns lápis e uma borracha. É o que você tem para começar."},
-{id:"celular",x:77,y:91,action:"open",target:"phone"},
-{id:"mala",x:89,y:63,action:"say",text:"Sua pequena mala. Dentro dela estão apenas as roupas que você poderá levar para a cidade."},
-{id:"janela",x:57,y:19,action:"say",text:"Lá fora, o interior está silencioso. Amanhã você partirá para a cidade grande."}]},
+{id:"mochila",x:18.52,y:24.86,action:"say",text:"A mochila que sua mãe lhe deu quatro anos atrás. Velha, mas ainda firme."},
+{id:"jaleco",x:28.17,y:36.42,action:"open",target:"coat"},
+{id:"caderno",x:41.04,y:69.13,action:"open",target:"notebook"},
+{id:"estojo",x:75.5,y:67.06,action:"say",text:"Seu estojo. Poucas canetas, alguns lápis e uma borracha. É o que você tem para começar."},
+{id:"celular",x:75.02,y:82.67,action:"open",target:"phone"},
+{id:"mala",x:91.76,y:43.4,action:"say",text:"Sua pequena mala. Dentro dela estão apenas as roupas que você poderá levar para a cidade."},
+{id:"janela",x:55.18,y:11.74,action:"say",text:"Lá fora, o interior está silencioso. Amanhã você partirá para a cidade grande."},
+{id:"porta",x:87.34,y:15.3,action:"say",text:"A porta está fechada. Por enquanto, você ainda está no seu quarto."}]},
 
 phone:{image:"assets/scenes/02_celular.webp",speaker:"Narrador",text:"A tela está quebrada, mas o aparelho ainda funciona. Por enquanto, isso basta.",back:"room"},
 notebook:{image:"assets/scenes/03_caderno.webp",speaker:"Narrador",text:"O caderno que seu pai lhe deu. Não é caro, mas carrega anos de esforço e uma lembrança que você pretende levar consigo.",back:"room"},
