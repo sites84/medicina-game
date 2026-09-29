@@ -41,7 +41,7 @@ university:{image:"assets/scenes/08_faculdade.webp",speaker:"Narrador",text:"É 
 {id:"mala",x:77,y:83,action:"say",text:"Sua mala. O dinheiro que você trouxe só cobre o primeiro mês de aluguel e alimentação."}]}}
 ;
 
-const state={name:"",scene:"room"};
+const state={name:"",scene:"room",clicked:{}};
 const img=document.getElementById("sceneImage");
 const hotspots=document.getElementById("hotspots");
 const speaker=document.getElementById("speaker");
@@ -56,6 +56,10 @@ function say(message,who="Narrador"){
   text.textContent=message.replaceAll("{nome}",state.name);
 }
 
+function hotspotKey(scene,id){
+  return scene+"::"+id;
+}
+
 function render(key){
   state.scene=key;
   const s=scenes[key];
@@ -67,7 +71,7 @@ function render(key){
 
   (s.hotspots||[]).forEach(h=>{
     const b=document.createElement("button");
-    b.className="hotspot";
+    b.className="hotspot"+(state.clicked[hotspotKey(key,h.id)]?" clicked":"");
     b.style.left=h.x+"%";
     b.style.top=h.y+"%";
     b.setAttribute("aria-label",h.id);
@@ -84,6 +88,10 @@ function render(key){
 }
 
 function handle(h){
+  state.clicked[hotspotKey(state.scene,h.id)]=true;
+  const button=[...hotspots.children].find(b=>b.getAttribute("aria-label")===h.id);
+  if(button) button.classList.add("clicked");
+
   if(h.action==="say") say(h.text);
   if(h.action==="open") render(h.target);
   if(h.action==="nextScene"){
