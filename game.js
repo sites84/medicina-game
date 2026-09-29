@@ -1,15 +1,17 @@
 const scenes={
 room:{image:"assets/scenes/01_quarto.webp",speaker:"Narrador",text:"Amanhã começa uma nova vida. Pela primeira vez, a Medicina deixa de ser apenas um sonho distante.",hotspots:[
-{id:"mochila",x:18.52,y:24.86,action:"say",text:"A mochila que sua mãe lhe deu quatro anos atrás. Velha, mas ainda firme."},
+{id:"mochila",x:18.52,y:24.86,action:"open",target:"backpack"},
 {id:"jaleco",x:28.17,y:36.42,action:"open",target:"coat"},
 {id:"caderno",x:41.04,y:69.13,action:"open",target:"notebook"},
 {id:"estojo",x:75.5,y:67.06,action:"say",text:"Seu estojo. Poucas canetas, alguns lápis e uma borracha. É o que você tem para começar."},
 {id:"celular",x:75.02,y:82.67,action:"open",target:"phone"},
 {id:"mala",x:91.76,y:43.4,action:"say",text:"Sua pequena mala. Dentro dela estão apenas as roupas que você poderá levar para a cidade."},
-{id:"janela",x:55.18,y:11.74,action:"say",text:"Lá fora, o interior está silencioso. Amanhã você partirá para a cidade grande."},
+{id:"janela",x:55.18,y:11.74,action:"open",target:"windowView"},
 {id:"porta",x:87.34,y:15.3,action:"nextScene",target:"family",text:"Está na hora. Você pega suas coisas, abre a porta e se prepara para se despedir da sua família."}]},
 
-phone:{image:"assets/scenes/02_celular.webp",speaker:"Narrador",text:"A tela está quebrada, mas o aparelho ainda funciona. Por enquanto, isso basta.",back:"room"},
+phone:{image:"assets/scenes/celular_detalhe.webp",speaker:"Narrador",text:"A tela está quebrada, mas o aparelho ainda funciona. Por enquanto, isso basta.",back:"room"},
+backpack:{image:"assets/scenes/mochila_detalhe.webp",speaker:"Narrador",text:"Sua mochila está velha, manchada e desgastada pelo tempo. Mesmo assim, é nela que você vai carregar parte do que precisa para começar sua nova vida.",back:"room"},
+windowView:{image:"assets/scenes/vista_janela.webp",speaker:"Narrador",text:"Lá fora está o bairro rural onde você cresceu. As casas simples, a estrada de terra e as poucas luzes da noite parecem diferentes agora. Amanhã você vai partir para a cidade em busca do seu sonho.",back:"room"},
 notebook:{image:"assets/scenes/03_caderno.webp",speaker:"Narrador",text:"O caderno que seu pai lhe deu. Não é caro, mas carrega anos de esforço e uma lembrança que você pretende levar consigo.",back:"room"},
 coat:{image:"assets/scenes/04_jaleco.webp",speaker:"Narrador",text:"Seu primeiro jaleco. Comprado de segunda mão pela sua avó. Simples, usado e, para você, enorme.",back:"room"},
 
